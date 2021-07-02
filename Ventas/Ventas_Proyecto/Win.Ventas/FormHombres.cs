@@ -22,5 +22,77 @@ namespace Win.Ventas
             listaProdHombresBindingSource.DataSource = _product.obtener_Productos();
 
         }
+
+        private void listaProdHombresBindingNavigatorSaveItem1_Click(object sender, EventArgs e)
+        {
+            listaProdHombresBindingSource.EndEdit();//finaliza edicion
+            var hombre = (Hombre)listaProdHombresBindingSource.Current;
+
+            var resultado = _product.GuardarProdHombres(hombre);
+
+            if (resultado.Exitoso == true)
+            {
+                listaProdHombresBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarBotones(true);
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+        }
+
+        private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e)
+        {
+            _product.AgregarProdHombres();
+            listaProdHombresBindingSource.MoveLast();
+
+            DeshabilitarHabilitarBotones(false);
+        }
+
+        private void DeshabilitarHabilitarBotones(bool valor)
+        {
+            bindingNavigatorMoveFirstItem.Enabled = valor;
+            bindingNavigatorMoveLastItem.Enabled = valor;
+            bindingNavigatorMovePreviousItem.Enabled = valor;
+            bindingNavigatorMoveNextItem.Enabled = valor;
+            bindingNavigatorPositionItem.Enabled = valor;
+
+            bindingNavigatorAddNewItem1.Enabled = valor;
+            bindingNavigatorDeleteItem1.Enabled = valor;
+            toolStripButtonCancelar1.Visible =! valor;
+
+        }
+
+        private void bindingNavigatorDeleteItem1_Click(object sender, EventArgs e)
+        {
+        
+            if(codigoTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var codigo = Convert.ToInt32(codigoTextBox.Text);
+
+                    Eliminar(codigo);
+                }
+             }
+        }
+        private void Eliminar(int codigo)
+        {
+            var resultado = _product.EliminarProdHombres(codigo);
+            if (resultado == true)
+            {
+                listaProdHombresBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un error al eliminar el producto");
+            }
+        }
+        private void toolStripButtonCancelar1_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarBotones(true);
+            Eliminar(0);
+        }
     }
 }

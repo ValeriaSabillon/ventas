@@ -50,8 +50,9 @@ namespace BL.Ventas
         {
             return ListaProdNiños;
         }
+    }
 
-        public class Niño
+    public class Niño
         {
             public int Codigo { get; set; }
             public string Descripcion { get; set; }
@@ -59,6 +60,6 @@ namespace BL.Ventas
             public string Seccion { get; set; }
             public int Existencia { get; set; }
             public bool Activo { get; set; }
-        }
+        
     }
 }

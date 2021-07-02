@@ -51,7 +51,7 @@ namespace BL.Ventas
             return ListaProdMujeres;
         }
 
-        public Resultado GuardarProdMujeres(Mujer mujer)
+        public ResultadoMujer GuardarProdMujeres(Mujer mujer)
         {
             var resultado = Validar(mujer);
             if (resultado.Exitoso == false)
@@ -83,9 +83,9 @@ namespace BL.Ventas
             }
             return false;
         }
-        private Resultado Validar(Mujer mujer)
+        private ResultadoMujer Validar(Mujer mujer)
         {
-            var resultado = new Resultado();
+            var resultado = new ResultadoMujer();
             resultado.Exitoso = true;
             if (string.IsNullOrEmpty(mujer.Descripcion) == true)
             {
@@ -121,7 +121,7 @@ namespace BL.Ventas
         public bool Activo { get; set; }
       
     }
-    public class Resultado
+    public class ResultadoMujer
     {
         public bool Exitoso { get; set; }
         public string Mensaje { get; set; }

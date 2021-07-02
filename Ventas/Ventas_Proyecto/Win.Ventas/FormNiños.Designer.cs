@@ -123,7 +123,7 @@
             // 
             // listaProdNiñosBindingSource
             // 
-            this.listaProdNiñosBindingSource.DataSource = typeof(BL.Ventas.NiñosBL.Niño);
+            this.listaProdNiñosBindingSource.DataSource = typeof(BL.Ventas.NiñosBL);
             // 
             // listaProdNiñosBindingNavigator
             // 
