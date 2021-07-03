@@ -37,6 +37,7 @@
             System.Windows.Forms.Label seccionLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHombres));
             this.listaProdHombresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaProdHombresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +57,6 @@
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.seccionTextBox = new System.Windows.Forms.TextBox();
-            this.listaProdHombresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
@@ -152,6 +152,10 @@
             this.listaProdHombresBindingNavigator.Size = new System.Drawing.Size(396, 25);
             this.listaProdHombresBindingNavigator.TabIndex = 0;
             this.listaProdHombresBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // listaProdHombresBindingSource
+            // 
+            this.listaProdHombresBindingSource.DataSource = typeof(BL.Ventas.Hombre);
             // 
             // bindingNavigatorCountItem
             // 
@@ -267,7 +271,6 @@
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
             this.activoCheckBox.TabIndex = 2;
-            this.activoCheckBox.Text = "checkBox1";
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // codigoTextBox
@@ -310,10 +313,6 @@
             this.seccionTextBox.Name = "seccionTextBox";
             this.seccionTextBox.Size = new System.Drawing.Size(248, 20);
             this.seccionTextBox.TabIndex = 12;
-            // 
-            // listaProdHombresBindingSource
-            // 
-            this.listaProdHombresBindingSource.DataSource = typeof(BL.Ventas.Hombre);
             // 
             // FormHombres
             // 

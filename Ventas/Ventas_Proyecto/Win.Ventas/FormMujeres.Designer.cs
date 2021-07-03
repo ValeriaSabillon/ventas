@@ -37,6 +37,7 @@
             System.Windows.Forms.Label seccionLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMujeres));
             this.listaProdMujeresBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaProdMujeresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -56,7 +57,6 @@
             this.existenciaTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
             this.seccionTextBox = new System.Windows.Forms.TextBox();
-            this.listaProdMujeresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             codigoLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
@@ -153,6 +153,10 @@
             this.listaProdMujeresBindingNavigator.TabIndex = 0;
             this.listaProdMujeresBindingNavigator.Text = "bindingNavigator1";
             this.listaProdMujeresBindingNavigator.RefreshItems += new System.EventHandler(this.listaProdMujeresBindingNavigator_RefreshItems);
+            // 
+            // listaProdMujeresBindingSource
+            // 
+            this.listaProdMujeresBindingSource.DataSource = typeof(BL.Ventas.MujeresBL);
             // 
             // bindingNavigatorCountItem
             // 
@@ -268,7 +272,6 @@
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
             this.activoCheckBox.TabIndex = 2;
-            this.activoCheckBox.Text = "checkBox1";
             this.activoCheckBox.UseVisualStyleBackColor = true;
             // 
             // codigoTextBox
@@ -311,10 +314,6 @@
             this.seccionTextBox.Name = "seccionTextBox";
             this.seccionTextBox.Size = new System.Drawing.Size(267, 20);
             this.seccionTextBox.TabIndex = 12;
-            // 
-            // listaProdMujeresBindingSource
-            // 
-            this.listaProdMujeresBindingSource.DataSource = typeof(BL.Ventas.MujeresBL);
             // 
             // FormMujeres
             // 
