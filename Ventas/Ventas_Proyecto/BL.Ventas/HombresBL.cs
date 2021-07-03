@@ -60,7 +60,7 @@ namespace BL.Ventas
             }
             if (hombre.Codigo == 0)
             {
-                hombre.Codigo = ListaProdHombres.Max(item => item.Codigo) + 1;
+                hombre.Codigo = ListaProdHombres.Max(item => item.Codigo) + 1;// busca y aumenta el maximo codigo
             }
             resultado.Exitoso = true;
             return resultado;
@@ -68,11 +68,11 @@ namespace BL.Ventas
         public void AgregarProdHombres()
         {
             var nuevoProdHombres = new Hombre();
-            ListaProdHombres.Add(nuevoProdHombres);
+            ListaProdHombres.Add(nuevoProdHombres);//se agrega un nuevo producto a la lista
         }
         public bool EliminarProdHombres(int codigo)
         {
-            foreach (var hombre in ListaProdHombres)
+            foreach (var hombre in ListaProdHombres)//recorre la lista de los objetos
             {
                 if (hombre.Codigo==codigo)
                 {

@@ -26,13 +26,13 @@ namespace Win.Ventas
         private void listaProdHombresBindingNavigatorSaveItem1_Click(object sender, EventArgs e)
         {
             listaProdHombresBindingSource.EndEdit();//finaliza edicion
-            var hombre = (Hombre)listaProdHombresBindingSource.Current;
+            var hombre = (Hombre)listaProdHombresBindingSource.Current;//Obtenemos las propiedades del producto actual de la clase Hombres
 
             var resultado = _product.GuardarProdHombres(hombre);
 
             if (resultado.Exitoso == true)
             {
-                listaProdHombresBindingSource.ResetBindings(false);
+                listaProdHombresBindingSource.ResetBindings(false);//Guarda los nuevos cambios en la lista
                 DeshabilitarHabilitarBotones(true);
             }
             else
@@ -66,7 +66,7 @@ namespace Win.Ventas
         private void bindingNavigatorDeleteItem1_Click(object sender, EventArgs e)
         {
         
-            if(codigoTextBox.Text != "")
+            if(codigoTextBox.Text != "")//Para poder eliminar las listas deben  contener valores
             {
                 var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)

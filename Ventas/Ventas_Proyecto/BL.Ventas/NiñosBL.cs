@@ -59,7 +59,7 @@ namespace BL.Ventas
             }
             if(niños.Codigo==0)
             {
-                niños.Codigo = ListaProdNiños.Max(item => item.Codigo) + 1;// busca y aumenta el maximp codigo
+                niños.Codigo = ListaProdNiños.Max(item => item.Codigo) + 1;// busca y aumenta el maximo codigo
             }
             resultadoNiños.Exitoso = true;
             return resultadoNiños;
