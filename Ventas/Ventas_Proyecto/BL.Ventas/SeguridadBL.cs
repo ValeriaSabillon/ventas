@@ -8,20 +8,37 @@ namespace BL.Ventas
 {
     public class SeguridadBL
     {
-        public bool Autorizar(string usuario, string contraseña)
+        Contexto _contexto;
+
+        public SeguridadBL()
         {
-            if(usuario == "admin" && contraseña == "tienda")
+            _contexto = new Contexto();
+        }
+
+        public bool Autorizar(string usuario, string contrasena)
+        {
+            var usuarios = _contexto.Usuarios.ToList(); // Traer la lista de usuarios del contexto
+
+            foreach (var usuarioDB in usuarios)
             {
-                return true;
-            }
-            else
-            {
-                if (usuario == "caja" && contraseña == "caja1")
+                if (usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
                 {
                     return true;
                 }
             }
+
             return false;
         }
     }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Contrasena { get; set; }
+    }
+
 }
+
+
+
