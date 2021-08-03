@@ -526,7 +526,6 @@
             this.label1.Size = new System.Drawing.Size(109, 31);
             this.label1.TabIndex = 18;
             this.label1.Text = "ANULADO";
-           
             // 
             // FormFactura
             // 
