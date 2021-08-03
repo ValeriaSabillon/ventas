@@ -26,13 +26,8 @@ namespace Win.TiendaRopa
         {
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void buttonAceptar_Click(object sender, EventArgs e)
         {
             string usuario;
             string contrasena;
@@ -40,8 +35,8 @@ namespace Win.TiendaRopa
             usuario = textBox1.Text;
             contrasena = textBox2.Text;
 
-            button1.Enabled = false;
-            button1.Text = "Verificando...";
+            buttonAceptar.Enabled = false;
+            buttonAceptar.Text = "Verificando...";
             Application.DoEvents();
 
             var resultado = _seguridad.Autorizar(usuario, contrasena);
@@ -57,9 +52,9 @@ namespace Win.TiendaRopa
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void buttonCancelar_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }

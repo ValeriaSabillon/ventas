@@ -80,8 +80,16 @@ namespace BL.Ventas
             var seccion9 = new Seccion();
             seccion9.Descripcion = "Joyeria";
             contexto.Secciones.Add(seccion9);
-    
-            
+
+            var EstadoCiv1 = new EstadoCivil();
+            EstadoCiv1.Estados = "Soltero (a)";
+            contexto.EstadosCiv.Add(EstadoCiv1);
+
+            var EstadoCiv2 = new EstadoCivil();
+            EstadoCiv2.Estados = "Casado(a)";
+            contexto.EstadosCiv.Add(EstadoCiv2);
+
+
             base.Seed(contexto);
 
         }
