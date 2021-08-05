@@ -21,6 +21,13 @@ namespace BL.Ventas
             contexto.Usuarios.Add(usuarioAdmin);
 
 
+            var usuarioCaja = new Usuario();
+            usuarioCaja.Nombre = "Caja";
+            usuarioCaja.Contrasena = "tienda";
+
+            contexto.Usuarios.Add(usuarioCaja);
+
+
             // Categorias de ropa
 
             var departamento1 = new Departamento();

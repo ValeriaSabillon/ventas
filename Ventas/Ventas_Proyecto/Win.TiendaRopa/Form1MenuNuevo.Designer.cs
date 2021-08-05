@@ -58,12 +58,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HoraFecha = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel3.SuspendLayout();
             this.panelLateralizquierdo.SuspendLayout();
             this.panelSubmenuReportes.SuspendLayout();
             this.panelSeguridad.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -109,6 +112,7 @@
             // panelLateralizquierdo
             // 
             this.panelLateralizquierdo.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panelLateralizquierdo.Controls.Add(this.statusStrip1);
             this.panelLateralizquierdo.Controls.Add(this.panelSubmenuReportes);
             this.panelLateralizquierdo.Controls.Add(this.panel10);
             this.panelLateralizquierdo.Controls.Add(this.panelSeguridad);
@@ -436,6 +440,22 @@
             this.panelContenedor.TabIndex = 3;
             this.panelContenedor.Click += new System.EventHandler(this.panelContenedor_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 624);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(302, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
             // Form1MenuNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,10 +477,13 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelLateralizquierdo.ResumeLayout(false);
+            this.panelLateralizquierdo.PerformLayout();
             this.panelSubmenuReportes.ResumeLayout(false);
             this.panelSeguridad.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -495,5 +518,7 @@
         public System.Windows.Forms.Timer HoraFecha;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Label Hora;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

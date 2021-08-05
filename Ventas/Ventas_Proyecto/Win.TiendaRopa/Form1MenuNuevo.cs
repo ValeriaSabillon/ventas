@@ -131,6 +131,8 @@ namespace Win.TiendaRopa
         {
             var formLogin = new FormLogin();
             formLogin.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario: " + Utilidades.NombreUsuario;
         }
 
         private void button4_Click(object sender, EventArgs e)

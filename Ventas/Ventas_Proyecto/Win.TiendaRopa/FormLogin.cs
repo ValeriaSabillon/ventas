@@ -39,10 +39,11 @@ namespace Win.TiendaRopa
             buttonAceptar.Text = "Verificando...";
             Application.DoEvents();
 
-            var resultado = _seguridad.Autorizar(usuario, contrasena);
+            var usuarioDB = _seguridad.Autorizar(usuario, contrasena);
 
-            if (resultado == true)
+            if (usuarioDB != null)
             {
+                Utilidades.NombreUsuario = usuarioDB.Nombre;
                 this.Close();
 
             }
@@ -55,6 +56,28 @@ namespace Win.TiendaRopa
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    textBox2.Focus();
+                }
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (textBox2.Text != "")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    buttonAceptar.PerformClick();
+                }
+            }
         }
     }
 }
