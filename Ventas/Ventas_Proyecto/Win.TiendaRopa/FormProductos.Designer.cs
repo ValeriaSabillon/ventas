@@ -510,10 +510,11 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(781, 12);
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(786, 9);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 20);
+            this.button3.Size = new System.Drawing.Size(71, 25);
             this.button3.TabIndex = 22;
             this.button3.Text = "Buscar";
             this.button3.UseVisualStyleBackColor = false;
