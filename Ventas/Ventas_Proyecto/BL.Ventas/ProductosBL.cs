@@ -32,9 +32,12 @@ namespace BL.Ventas
 
         public BindingList<Producto> ObtenerProductos(string buscar)
         {
-            var query = _contexto.Productos.Where(producto => producto.Descripcion.Contains(buscar)).ToList();
+            var query = _contexto.Productos
+                .Where(producto => producto.Descripcion.ToLower().Contains(buscar.ToLower()))
+                .OrderBy(producto => producto.Descripcion)
+                .ToList();
 
-            ListaProductos = new BindingList<Producto>(query);
+            ListaProductos = new BindingList<Producto>();
 
             return ListaProductos;
         }
