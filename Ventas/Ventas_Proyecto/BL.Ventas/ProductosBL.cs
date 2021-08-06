@@ -37,7 +37,7 @@ namespace BL.Ventas
                 .OrderBy(producto => producto.Descripcion)
                 .ToList();
 
-            ListaProductos = new BindingList<Producto>();
+            ListaProductos = new BindingList<Producto>(query);
 
             return ListaProductos;
         }

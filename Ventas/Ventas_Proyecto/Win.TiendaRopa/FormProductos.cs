@@ -178,18 +178,28 @@ namespace Win.TiendaRopa
         {
             if(e.KeyChar == (Char)Keys.Enter)
             {
-            
+
+                Buscar();
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+
+        private void Buscar()
+        {
             var busqueda = textBox1.Text;
 
             if (busqueda != "")
-                {
-                    listaProductosBindingSource.DataSource = _productos.ObtenerProductos(busqueda);
-                }
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos(busqueda);
+            }
             else
-                {
-                    listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
-                }
-
+            {
+                listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
             }
         }
     }
