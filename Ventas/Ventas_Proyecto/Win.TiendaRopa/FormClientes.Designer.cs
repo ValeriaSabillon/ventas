@@ -66,6 +66,8 @@
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             activoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -327,7 +329,7 @@
             this.toolStripButtoncancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtoncancelar.Image")));
             this.toolStripButtoncancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtoncancelar.Name = "toolStripButtoncancelar";
-            this.toolStripButtoncancelar.Size = new System.Drawing.Size(55, 19);
+            this.toolStripButtoncancelar.Size = new System.Drawing.Size(55, 22);
             this.toolStripButtoncancelar.Text = "cancelar";
             this.toolStripButtoncancelar.Visible = false;
             this.toolStripButtoncancelar.Click += new System.EventHandler(this.toolStripButtoncancelar_Click);
@@ -459,12 +461,34 @@
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(549, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(152, 20);
+            this.textBox1.TabIndex = 22;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(707, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(88, 20);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(889, 573);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.direccionTextBox);
             this.Controls.Add(estadoCivilIdLabel);
@@ -530,5 +554,7 @@
         private System.Windows.Forms.BindingSource listaEstadosBindingSource;
         private System.Windows.Forms.TextBox direccionTextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

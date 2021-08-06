@@ -107,8 +107,37 @@ namespace Win.TiendaRopa
             this.Close();
             
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)Keys.Enter)
+            {
+
+                Buscar();
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Buscar();
+        }
+        private void Buscar()
+        {
+            var busqueda = textBox1.Text;
+
+            if (busqueda != "")
+            {
+                listaClientesBindingSource.DataSource = _clientesBL.ObtenerClientes(busqueda);
+            }
+            else
+            {
+                listaClientesBindingSource.DataSource = _clientesBL.ObtenerClientes();
+            }
+        }
     }
     }
+    
 
 
 

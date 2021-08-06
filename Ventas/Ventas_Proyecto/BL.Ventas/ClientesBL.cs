@@ -25,6 +25,19 @@ namespace BL.Ventas
             return ListaClientes;
         }
 
+        public BindingList<Cliente> ObtenerClientes(string buscar)
+        {
+            var query = _contexto.Clientes
+                .Where(cliente => cliente.Nombre.ToLower().Contains(buscar.ToLower()))
+                .OrderBy(cliente => cliente.Nombre)
+                .ToList();
+
+            ListaClientes = new BindingList<Cliente>(query);
+
+            return ListaClientes;
+        }
+
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

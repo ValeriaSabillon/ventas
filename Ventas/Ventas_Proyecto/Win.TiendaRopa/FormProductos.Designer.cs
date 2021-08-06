@@ -502,7 +502,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(628, 12);
+            this.textBox1.Location = new System.Drawing.Point(628, 8);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(152, 20);
             this.textBox1.TabIndex = 21;
@@ -512,7 +512,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.DodgerBlue;
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(786, 9);
+            this.button3.Location = new System.Drawing.Point(786, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 25);
             this.button3.TabIndex = 22;
