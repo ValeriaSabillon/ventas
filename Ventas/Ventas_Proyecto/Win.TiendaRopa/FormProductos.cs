@@ -24,7 +24,6 @@ namespace Win.TiendaRopa
             InitializeComponent();
 
             _productos = new ProductosBL();
-            listaProductosBindingSource.DataSource = _productos.ObtenerProductos();
 
             _departamentoBL = new DepartamentosBL();
             listaDepartamentosBindingSource.DataSource = _departamentoBL.ObtenerDepartamentos();
@@ -166,6 +165,13 @@ namespace Win.TiendaRopa
         {
             this.Close();
             
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var busqueda = textBox1.Text;
+            listaProductosBindingSource.DataSource = _productos.ObtenerProductos(busqueda);
+
         }
     }
 }

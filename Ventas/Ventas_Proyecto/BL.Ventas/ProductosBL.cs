@@ -30,6 +30,15 @@ namespace BL.Ventas
             return ListaProductos;
         }
 
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {
+            var query = _contexto.Productos.Where(producto => producto.Descripcion.Contains(buscar)).ToList();
+
+            ListaProductos = new BindingList<Producto>(query);
+
+            return ListaProductos;
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())
