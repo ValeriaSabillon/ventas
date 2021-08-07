@@ -195,9 +195,12 @@
             // listaClientesBindingNavigator
             // 
             this.listaClientesBindingNavigator.AddNewItem = null;
+            this.listaClientesBindingNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listaClientesBindingNavigator.BindingSource = this.listaClientesBindingSource;
             this.listaClientesBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaClientesBindingNavigator.DeleteItem = null;
+            this.listaClientesBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.listaClientesBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -219,7 +222,7 @@
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(889, 25);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(280, 25);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -329,7 +332,7 @@
             this.toolStripButtoncancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtoncancelar.Image")));
             this.toolStripButtoncancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtoncancelar.Name = "toolStripButtoncancelar";
-            this.toolStripButtoncancelar.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButtoncancelar.Size = new System.Drawing.Size(55, 19);
             this.toolStripButtoncancelar.Text = "cancelar";
             this.toolStripButtoncancelar.Visible = false;
             this.toolStripButtoncancelar.Click += new System.EventHandler(this.toolStripButtoncancelar_Click);
@@ -463,19 +466,24 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Tw Cen MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(549, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
+            this.textBox1.Size = new System.Drawing.Size(152, 22);
             this.textBox1.TabIndex = 22;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GreenYellow;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(707, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 20);
+            this.button1.Size = new System.Drawing.Size(88, 22);
             this.button1.TabIndex = 23;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = false;

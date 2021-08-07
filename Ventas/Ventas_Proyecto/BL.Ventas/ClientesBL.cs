@@ -131,6 +131,7 @@ namespace BL.Ventas
         public Cliente()
         {
             Activo = true;
+            FechaNacimiento = DateTime.Now;
         }
 
     }

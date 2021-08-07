@@ -51,6 +51,9 @@ namespace Win.TiendaRopa
             {
                 MessageBox.Show("Usuario o contraseña incorrecta");
             }
+
+            buttonAceptar.Enabled = true;
+            buttonAceptar.Text = "Aceptar";
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)

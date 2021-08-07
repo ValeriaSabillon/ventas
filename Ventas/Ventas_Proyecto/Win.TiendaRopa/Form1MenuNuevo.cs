@@ -146,7 +146,8 @@ namespace Win.TiendaRopa
         private void panelLateralizquierdo_Click(object sender, EventArgs e)
         {
             DeshabilitarPaneles();
-            Etiqueta.Visible = false;
+            Etiqueta.Text = "INICIO";
+
         }
 
         private void HoraFecha_Tick(object sender, EventArgs e)
@@ -165,6 +166,15 @@ namespace Win.TiendaRopa
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Etiqueta.Text = "INICIO";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            AbrirFormulario(new FormUsuarios());
+
+            DeshabilitarPaneles();
+
         }
     }
 }

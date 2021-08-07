@@ -43,7 +43,9 @@
             this.buttonRventas = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panelSeguridad = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -56,10 +58,10 @@
             this.Producto = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.HoraFecha = new System.Windows.Forms.Timer(this.components);
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panelLateralizquierdo.SuspendLayout();
             this.panelSubmenuReportes.SuspendLayout();
@@ -112,7 +114,6 @@
             // panelLateralizquierdo
             // 
             this.panelLateralizquierdo.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panelLateralizquierdo.Controls.Add(this.statusStrip1);
             this.panelLateralizquierdo.Controls.Add(this.panelSubmenuReportes);
             this.panelLateralizquierdo.Controls.Add(this.panel10);
             this.panelLateralizquierdo.Controls.Add(this.panelSeguridad);
@@ -142,7 +143,7 @@
             this.panelSubmenuReportes.Controls.Add(this.buttonRproductos);
             this.panelSubmenuReportes.Controls.Add(this.buttonRventas);
             this.panelSubmenuReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSubmenuReportes.Location = new System.Drawing.Point(66, 357);
+            this.panelSubmenuReportes.Location = new System.Drawing.Point(66, 358);
             this.panelSubmenuReportes.Name = "panelSubmenuReportes";
             this.panelSubmenuReportes.Size = new System.Drawing.Size(238, 155);
             this.panelSubmenuReportes.TabIndex = 6;
@@ -239,22 +240,50 @@
             // 
             // panelSeguridad
             // 
+            this.panelSeguridad.Controls.Add(this.panel1);
             this.panelSeguridad.Controls.Add(this.panel13);
+            this.panelSeguridad.Controls.Add(this.button2);
             this.panelSeguridad.Controls.Add(this.button4);
             this.panelSeguridad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelSeguridad.Location = new System.Drawing.Point(66, 489);
             this.panelSeguridad.Name = "panelSeguridad";
-            this.panelSeguridad.Size = new System.Drawing.Size(238, 51);
+            this.panelSeguridad.Size = new System.Drawing.Size(238, 109);
             this.panelSeguridad.TabIndex = 7;
             this.panelSeguridad.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.GreenYellow;
+            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 47);
+            this.panel1.TabIndex = 5;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.GreenYellow;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Location = new System.Drawing.Point(0, 56);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(10, 47);
             this.panel13.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GreenYellow;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tw Cen MT Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(7, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 47);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Usuarios";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -266,7 +295,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(5, 0);
+            this.button4.Location = new System.Drawing.Point(5, 56);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(228, 47);
             this.button4.TabIndex = 3;
@@ -421,6 +450,26 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusStrip1.Location = new System.Drawing.Point(302, 624);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(871, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel1.LinkColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(46, 17);
+            this.toolStripStatusLabel1.Text = "Usuario:";
+            // 
             // HoraFecha
             // 
             this.HoraFecha.Enabled = true;
@@ -440,28 +489,13 @@
             this.panelContenedor.TabIndex = 3;
             this.panelContenedor.Click += new System.EventHandler(this.panelContenedor_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 624);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(302, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
-            this.toolStripStatusLabel1.Text = "Usuario:";
-            // 
             // Form1MenuNuevo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1173, 646);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelLateralizquierdo);
@@ -477,7 +511,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelLateralizquierdo.ResumeLayout(false);
-            this.panelLateralizquierdo.PerformLayout();
             this.panelSubmenuReportes.ResumeLayout(false);
             this.panelSeguridad.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -520,5 +553,7 @@
         private System.Windows.Forms.Label Hora;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
     }
 }
